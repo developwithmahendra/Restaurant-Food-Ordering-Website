@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Book a table – Saffron &amp; Salt</title>
+    <meta name="description"
+        content="Saffron &amp; Salt – modern Indian kitchen. View the menu, order online and book a table.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="top">
+        <div class="wrap bar"><a class="logo" href="index.html" data-p="index">Saffron <i>&amp;</i> Salt</a>
+            <nav class="nav" id="nav" aria-label="Main"><a data-p="index" href="index.html">Home</a><a data-p="menu"
+                    href="menu.html">Menu</a><a data-p="contact" href="contact.html">Book &amp; Contact</a></nav>
+            <button class="pill" id="cartBtn">Order (<span id="cartN">0</span>)</button>
+            <button class="tgl" id="tgl" aria-expanded="false" aria-controls="nav">Menu</button>
+        </div>
+    </header>
+    <main data-view="contact">
+        <div class="wrap">
+            <div class="pg">
+                <h1>Book a table</h1>
+                <p class="sub">Reserve a table or send us a message. We reply the same day.</p>
+            </div>
+            <div class="two">
+                <div class="card">
+                    <form id="book" novalidate>
+                        <h2 style="font-size:1.6rem">Reservation</h2>
+                        <label>Name<input name="name" autocomplete="name"><span class="err"
+                                aria-live="polite"></span></label>
+                        <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="numeric"><span
+                                class="err" aria-live="polite"></span></label>
+                        <div class="row"><label>Date<input name="date" type="date"><span class="err"
+                                    aria-live="polite"></span></label><label>Time<select name="time"></select><span
+                                    class="err" aria-live="polite"></span></label></div>
+                        <div><b>Guests</b>
+                            <div class="step"><button type="button" data-step="-1"
+                                    aria-label="Fewer guests">−</button><output id="gOut" value="2">2</output><button
+                                    type="button" data-step="1" aria-label="More guests">+</button><input type="hidden"
+                                    name="guests" value="2"></div>
+                        </div>
+                        <button class="btn" type="submit">Request table</button>
+                    </form>
+                </div>
+                <div class="info card">
+                    <h3>Find us</h3>
+                    <p>12 Garden Road, Your City</p>
+                    <h3>Call</h3>
+                    <p>+91 98765 43210</p>
+                    <h3>Hours</h3>
+                    <div class="hrs"><span>Mon–Fri</span><span>12:00–23:00</span></div>
+                    <div class="hrs"><span>Sat–Sun</span><span>11:00–23:30</span></div>
+                </div>
+            </div>
+            <div class="card" style="margin-top:2rem;max-width:40rem">
+                <form id="msg" novalidate>
+                    <h2 style="font-size:1.6rem">Send a message</h2>
+                    <label>Name<input name="name" autocomplete="name"><span class="err"
+                            aria-live="polite"></span></label>
+                    <label>Email<input name="email" type="email" autocomplete="email"><span class="err"
+                            aria-live="polite"></span></label>
+                    <label>Message<textarea name="msg" rows="4"></textarea><span class="err"
+                            aria-live="polite"></span></label>
+                    <div><button class="btn" type="submit">Send</button></div>
+                </form>
+            </div>
+            <div style="height:4rem"></div>
+        </div>
+    </main>
+    <div class="ov" id="ov"></div>
+    <aside class="cart" id="cart" aria-label="Your order" hidden><button class="x" aria-label="Close order">×</button>
+        <h2>Your order</h2>
+        <ul id="cartList"></ul>
+        <div class="tot"><span>Total</span><span id="cartT">₹0</span></div><button class="btn" id="place" disabled>Place
+            order</button>
+    </aside>
+    <footer class="ft">
+        <div class="wrap"><span>© <span id="yr"></span> Saffron &amp; Salt. Open daily 12:00–23:00.</span><span><a
+                    href="menu.html" data-p="menu">Menu</a> · <a href="contact.html" data-p="contact">Book a
+                    table</a></span></div>
+    </footer>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

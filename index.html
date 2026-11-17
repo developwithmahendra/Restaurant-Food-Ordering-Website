@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Saffron &amp; Salt – Modern Indian Kitchen</title>
+
+    <meta name="description"
+        content="Saffron &amp; Salt – modern Indian kitchen. View the menu, order online and book a table.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top">
+        <div class="wrap bar">
+
+            <a class="logo" href="index.html" data-p="index">
+                Saffron <i>&amp;</i> Salt
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Main">
+                <a data-p="index" href="index.html">Home</a>
+                <a data-p="menu" href="menu.html">Menu</a>
+                <a data-p="contact" href="contact.html">Book &amp; Contact</a>
+            </nav>
+
+            <button class="pill" id="cartBtn">
+                Order (<span id="cartN">0</span>)
+            </button>
+
+            <button class="tgl" id="tgl" aria-expanded="false" aria-controls="nav">
+                Menu
+            </button>
+
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main data-view="index">
+
+        <!-- HERO SLIDER -->
+        <section class="hero" style="padding:0" aria-roledescription="carousel"
+            aria-label="Featured dishes">
+
+            <!-- SLIDE 1 -->
+            <div class="slide" style="background:#1f4d3a">
+
+                <div class="tx">
+                    <h1>Fire-roasted starters</h1>
+
+                    <p>Clay-oven classics, made fresh every morning.</p>
+
+                    <a class="btn" href="menu.html" data-p="menu">
+                        See the menu
+                    </a>
+                </div>
+
+                <img
+                    class="plate"
+                    src="images/Glossy Chilli Paneer Platter.png"
+                    alt="Fire roasted Paneer Tikka">
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="slide" style="background:#8e3a1f">
+
+                <div class="tx">
+                    <h1>Slow-cooked mains</h1>
+
+                    <p>Gravies simmered for hours, naan baked to order.</p>
+
+                    <a class="btn" href="menu.html" data-p="menu">
+                        Order online
+                    </a>
+                </div>
+
+                <img
+                    class="plate"
+                    src="images/Butter Chicken in Ornate Copper Bowl.png"
+                    alt="Slow cooked Butter Chicken">
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="slide" style="background:#43213d">
+
+                <div class="tx">
+                    <h1>Sweet endings</h1>
+
+                    <p>Warm tarts, dark chocolate and mango lassi.</p>
+
+                    <a class="btn" href="menu.html" data-p="menu">
+                        Pick dessert
+                    </a>
+                </div>
+
+                <img
+                    class="plate"
+                    src="images/Garnished Rasmalai in Elegant Bowl.png"
+                    alt="Delicious Gulab Jamun dessert">
+            </div>
+
+            <!-- SLIDER CONTROLS -->
+            <div class="hc">
+
+                <button id="prev" aria-label="Previous slide">
+                    ‹
+                </button>
+
+                <span id="dots" style="display:flex;gap:.5rem;align-items:center"></span>
+
+                <button id="next" aria-label="Next slide">
+                    ›
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section>
+            <div class="wrap">
+
+                <h2 class="rv">Cooked the slow way</h2>
+
+                <p class="sub rv">
+                    A small kitchen with a short menu, so every plate gets full attention.
+                </p>
+
+                <div class="cols">
+
+                    <div class="feat rv">
+                        <h3>Fresh every day</h3>
+                        <p>
+                            Vegetables and spices come in each morning,
+                            never from a freezer.
+                        </p>
+                    </div>
+
+                    <div class="feat rv">
+                        <h3>Wood and clay</h3>
+                        <p>
+                            Our tandoor and oven burn real wood for the smoky
+                            edge you can taste.
+                        </p>
+                    </div>
+
+                    <div class="feat rv">
+                        <h3>Order your way</h3>
+                        <p>
+                            Eat in, book a table, or build an order here
+                            and pick it up.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- POPULAR DISHES -->
+        <section style="padding-top:0">
+            <div class="wrap">
+
+                <h2 class="rv">Guest favourites</h2>
+
+                <p class="sub rv">
+                    The three dishes people order most.
+                </p>
+
+                <ul class="list" id="popular"></ul>
+
+            </div>
+        </section>
+
+        <!-- BOOKING SECTION -->
+        <section class="band">
+            <div class="wrap">
+
+                <h2>Saving a seat?</h2>
+
+                <p class="sub">
+                    Tell us when you are coming and how many of you there are.
+                </p>
+
+                <a class="btn" href="contact.html" data-p="contact">
+                    Book a table
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CART OVERLAY -->
+    <div class="ov" id="ov"></div>
+
+    <!-- CART -->
+    <aside class="cart" id="cart" aria-label="Your order" hidden>
+
+        <button class="x" aria-label="Close order">
+            
+        </button>
+
+        <h2>Your order</h2>
+
+        <ul id="cartList"></ul>
+
+        <div class="tot">
+            <span>Total</span>
+            <span id="cartT">₹0</span>
+        </div>
+
+        <button class="btn" id="place" disabled>
+            Place order
+        </button>
+
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="ft">
+        <div class="wrap">
+
+            <span>
+                © <span id="yr"></span> Saffron &amp; Salt.
+                Open daily 12:00–23:00.
+            </span>
+
+            <span>
+                <a href="menu.html" data-p="menu">Menu</a>
+                ·
+                <a href="contact.html" data-p="contact">Book a table</a>
+            </span>
+
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js" defer></script>
+
+</body>
+</html>

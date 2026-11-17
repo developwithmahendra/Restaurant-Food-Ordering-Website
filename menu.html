@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Menu – Saffron &amp; Salt</title>
+
+    <meta name="description"
+        content="Saffron & Salt – Modern Indian Kitchen. View our delicious food menu.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="top">
+
+        <div class="wrap bar">
+
+            <a class="logo" href="index.html" data-p="index">
+                Saffron <i>&amp;</i> Salt
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Main">
+
+                <a data-p="index" href="index.html">Home</a>
+
+                <a data-p="menu" href="menu.html">Menu</a>
+
+                <a data-p="contact" href="contact.html">
+                    Book &amp; Contact
+                </a>
+
+            </nav>
+
+            <button class="pill" id="cartBtn">
+                Order (<span id="cartN">0</span>)
+            </button>
+
+            <button class="tgl" id="tgl"
+                aria-expanded="false" aria-controls="nav">
+                Menu
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN MENU -->
+
+    <main data-view="menu">
+
+        <div class="wrap">
+
+            <div class="pg">
+
+                <h1>The Menu</h1>
+
+                <p class="sub">
+                    Green dot is vegetarian, red is not.
+                    Explore our delicious dishes.
+                </p>
+
+            </div>
+
+
+            <!-- CATEGORY FILTERS -->
+
+            <div class="filters"
+                id="filters"
+                role="group"
+                aria-label="Filter by category">
+            </div>
+
+
+            <!-- FOOD MENU -->
+
+            <ul class="list" id="menuList">
+
+                <li>
+                    <img src="images/paneer-tikka.jpg"
+                        alt="Paneer Tikka">
+                    <h3>Paneer Tikka</h3>
+                    <p>Fresh paneer marinated with Indian spices.</p>
+                </li>
+
+                <li>
+                    <img src="images/butter-chicken.jpg"
+                        alt="Butter Chicken">
+                    <h3>Butter Chicken</h3>
+                    <p>Creamy tomato gravy with tender chicken.</p>
+                </li>
+
+                <li>
+                    <img src="images/biryani.jpg"
+                        alt="Chicken Biryani">
+                    <h3>Chicken Biryani</h3>
+                    <p>Delicious aromatic rice with spices.</p>
+                </li>
+
+                <li>
+                    <img src="images/dal-makhani.jpg"
+                        alt="Dal Makhani">
+                    <h3>Dal Makhani</h3>
+                    <p>Slow cooked black lentils with butter.</p>
+                </li>
+
+                <li>
+                    <img src="images/naan.jpg"
+                        alt="Butter Naan">
+                    <h3>Butter Naan</h3>
+                    <p>Soft traditional Indian bread.</p>
+                </li>
+
+                <li>
+                    <img src="images/gulab-jamun.jpg"
+                        alt="Gulab Jamun">
+                    <h3>Gulab Jamun</h3>
+                    <p>Sweet and delicious Indian dessert.</p>
+                </li>
+
+            </ul>
+
+            <div style="height:4rem"></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- CART OVERLAY -->
+
+    <div class="ov" id="ov"></div>
+
+
+    <!-- SHOPPING CART -->
+
+    <aside class="cart" id="cart" aria-label="Your order" hidden>
+
+        <button class="x" aria-label="Close order">×</button>
+
+        <h2>Your order</h2>
+
+        <ul id="cartList"></ul>
+
+        <div class="tot">
+
+            <span>Total</span>
+
+            <span id="cartT">₹0</span>
+
+        </div>
+
+        <button class="btn" id="place" disabled>
+            Place order
+        </button>
+
+    </aside>
+
+
+    <!-- FOOTER -->
+
+    <footer class="ft">
+
+        <div class="wrap">
+
+            <span>
+                © <span id="yr"></span>
+                Saffron &amp; Salt. Open daily 12:00–23:00.
+            </span>
+
+            <span>
+
+                <a href="menu.html" data-p="menu">Menu</a>
+
+                ·
+
+                <a href="contact.html" data-p="contact">
+                    Book a table
+                </a>
+
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
